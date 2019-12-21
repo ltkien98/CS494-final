@@ -1,1 +1,2 @@
-# CS494-final
+# kivi-protocol
+Socket programming project for CS494 - Internetworking Protocols
