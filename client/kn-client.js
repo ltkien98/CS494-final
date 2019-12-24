@@ -16,7 +16,7 @@ process.on("unhandledRejection", (reason, p) => {
 clear();
 
 console.log(
-  chalk.yellow(figlet.textSync("Kivi Client", { horizontalLayout: "full" }))
+  chalk.yellow(figlet.textSync("KN Client", { horizontalLayout: "full" }))
 );
 console.log(chalk.blueBright("Type in commands to perform actions"));
 console.log(chalk.blueBright("Try 'connect 127.0.0.1 1337' to get started"));
@@ -48,9 +48,6 @@ const main = async () => {
           break;
         case ActionConstant.COMMAND.LOGIN:
           await handleLogin(commandArgs);
-          break;
-        case ActionConstant.COMMAND.CHAT:
-          await handleChat(commandArgs);
           break;
         case "exit":
         case "quit":
