@@ -8,7 +8,7 @@ module.exports = exceptionWrapper(async function(commandArgs) {
   if (result.status == CommonConstant.STATUS.SUCCESS) {
     Credential.setServerPubKey(result.data.pubKey);
     console.log(
-      chalk.greenBright("Connect successful, retrieved server's public key")
+      chalk.cyan("Connect successful, retrieved server's public key")
     );
   }
 });

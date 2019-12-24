@@ -16,7 +16,7 @@ process.on("unhandledRejection", (reason, p) => {
 clear();
 
 console.log(
-  chalk.yellow(figlet.textSync("NK Protocol", { horizontalLayout: "full" }))
+  chalk.yellow(figlet.textSync("Kivi Client", { horizontalLayout: "full" }))
 );
 console.log(chalk.blueBright("Type in commands to perform actions"));
 console.log(chalk.blueBright("Try 'connect 127.0.0.1 1337' to get started"));

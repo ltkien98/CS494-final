@@ -97,13 +97,17 @@ class ProtocolClient {
     );
   }
 
-  send(recievers, message, useEncrypt) {
+  send(receivers, message, useEncrypt) {
     if (!this._isConnected) {
       throw new Error("Not connected to server");
     }
 
+    if (useEncrypt) {
+      message = Credential.encrypt(message);
+    }
+
     const action = new SendAction()
-      .recievers(recievers)
+      .receivers(receivers)
       .message(message)
       .useEncrypt(useEncrypt);
 
