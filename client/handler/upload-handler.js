@@ -3,12 +3,15 @@ const CommonConstant = require("../helper/common-constant");
 const Credential = require("../credential");
 const chalk = require("chalk");
 const exceptionWrapper = require("../helper/exception-wrapper");
+const { promises: fs } = require("fs");
 module.exports = exceptionWrapper(async function(commandArgs) {
-  const result = await ProtocolClient.connect(commandArgs[1], commandArgs[2]);
+  let content = await fs.readFile(commandArgs[1]);
+  let useEncrypt = false;
+  const result = await ProtocolClient.upload(
+    commandArgs[1],
+    content,
+    useEncrypt
+  );
   if (result.status == CommonConstant.STATUS.SUCCESS) {
-    Credential.setServerPubKey(result.data.pubKey);
-    console.log(
-      chalk.greenBright("Connect successful, retrieved server's public key")
-    );
   }
 });

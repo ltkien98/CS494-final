@@ -2,12 +2,12 @@ const inquirer = require("inquirer");
 
 module.exports = {
   Inquirer: inquirer,
-  askAction: () => {
+  askCommand: () => {
     const questions = [
       {
-        name: "action",
+        name: "command",
         type: "input",
-        message: "action: ",
+        message: "command: ",
         validate: function(value) {
           if (value.length) {
             return true;
@@ -75,6 +75,21 @@ module.exports = {
         name: "message",
         type: "input",
         message: "message: "
+      }
+    ];
+    return inquirer.prompt(questions);
+  },
+  askCheck: () => {
+    const questions = [
+      {
+        name: "username",
+        type: "input",
+        message: "username: "
+      },
+      {
+        name: "option",
+        type: "input",
+        message: "option: "
       }
     ];
     return inquirer.prompt(questions);

@@ -14,6 +14,6 @@ module.exports = exceptionWrapper(async function(commandArgs) {
 
   const result = await ProtocolClient.register(username, password, useEncrypt);
   if (result.status == CommonConstant.STATUS.SUCCESS) {
-    console.log(chalk.cyan("Registration successful"));
+    console.log(chalk.greenBright("Registration successful"));
   }
 });

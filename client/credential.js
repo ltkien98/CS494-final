@@ -14,7 +14,7 @@ class Credential {
   genKey() {
     if (!this._privateKey || !this._publicKey) {
       const { privateKey, publicKey } = crypto.generateKeyPairSync("rsa", {
-        modulusLength: 1024,
+        modulusLength: 2048,
         publicKeyEncoding: {
           type: "spki",
           format: "pem"
