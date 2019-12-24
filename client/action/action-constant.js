@@ -4,12 +4,14 @@ module.exports = {
     REGISTER: "register",
     LOGIN: "login",
     SEND: "send",
-    RECEIVE: "receive"
+    RECEIVE: "receive",
+    SHOW: "show"
   },
   COMMAND: {
     CONNECT: "connect",
     REGISTER: "register",
     LOGIN: "login",
-    CHAT: "chat"
+    CHAT: "chat",
+    SHOW: "show",
   }
 };
