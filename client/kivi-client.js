@@ -22,7 +22,7 @@ console.log(chalk.yellowBright("Type in commands to perform actions"));
 console.log(chalk.yellowBright("Try 'connect 127.0.0.1 1337' to get started"));
 console.log(chalk.yellowBright("'register' to create account"));
 console.log(chalk.yellowBright("'login' to login your account"));
-console.log(chalk.yellowBright("'check' to search in database"));
+console.log(chalk.yellowBright("'check' to search in database (options: show name, show status, show date, show password, show note"));
 console.log(chalk.yellowBright("'exit' or 'quit' to exit program"));
 
 const inquirer = require("./helper/inquirer");

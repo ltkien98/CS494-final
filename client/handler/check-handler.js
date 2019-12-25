@@ -11,6 +11,6 @@ module.exports = exceptionWrapper(async function(commandArgs){
 
     const result = await ProtocolClient.check(username, option);
     if(result.status == CommonConstant.STATUS.SUCCESS) {
-        console.log(chalk.cyan(result.data));
+        console.log(chalk.cyan(JSON.stringify(result.data.query)));
     }
 })
