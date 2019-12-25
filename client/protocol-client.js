@@ -8,6 +8,7 @@ const { LoginAction } = require("./action/login-action");
 const { SendAction } = require("./action/send-action");
 const { UploadAction } = require("./action/upload-action");
 const { CheckAction } = require ("./action/check-action");
+const { SetupAction } = require ("./action/setup-action");
 
 const events = require("events");
 class ProtocolClient {
@@ -113,6 +114,18 @@ class ProtocolClient {
     this._client.write(msg);
     return new Promise((resolve, reject) =>
     this.deferResultPromise(resolve, reject) 
+    );
+  }
+
+  setup(username, option, value) {
+    if(!this._isConnected) {
+      throw new Error ("Not connected to server");
+    }
+    const action = new SetupAction().username(username).option(option).value(value);
+    const msg = action.getMessage();
+    this._client.write(msg);
+    return new Promise ((resolve, reject) =>
+    this.deferResultPromise(resolve, reject)
     );
   }
 

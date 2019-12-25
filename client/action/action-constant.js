@@ -6,7 +6,8 @@ module.exports = {
     SEND: "send",
     RECEIVE: "receive",
     UPLOAD: "upload",
-    CHECK: "check"
+    CHECK: "check",
+    SETUP: "setup"
   },
   COMMAND: {
     CONNECT: "connect",
@@ -14,6 +15,7 @@ module.exports = {
     LOGIN: "login",
     CHAT: "chat",
     UPLOAD: "upload",
-    CHECK: "check"
+    CHECK: "check",
+    SETUP: "setup"
   }
 };

@@ -6,7 +6,8 @@ const handleRegister = require("./register-handler");
 const handleLogin = require("./login-handler");
 const handleSend = require("./send-handler");
 const handleUpload = require("./upload-handler");
-const handleCheck = require("./check-handler")
+const handleCheck = require("./check-handler");
+const handleSetup = require("./setup-handler");
 
 module.exports = async function(msg, socket) {
   const action = ActionMessage.fromJson(JSON.parse(msg));
@@ -24,5 +25,7 @@ module.exports = async function(msg, socket) {
       return handleUpload(action.data, action.socketId);
     case ActionConstant.TYPE.CHECK:
       return handleCheck(action.data, action.socketId);
+    case ActionConstant.TYPE.SETUP:
+      return handleSetup(action.data, action.socketId);
   }
 };

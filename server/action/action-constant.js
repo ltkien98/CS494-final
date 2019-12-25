@@ -7,6 +7,7 @@ module.exports = {
     RECEIVE: "receive",
     UPLOAD: "upload",
     DOWNLOAD: "download",
-    CHECK: "check"
+    CHECK: "check",
+    SETUP: "setup"
   }
 };

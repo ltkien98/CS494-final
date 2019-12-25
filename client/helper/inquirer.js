@@ -93,5 +93,24 @@ module.exports = {
       }
     ];
     return inquirer.prompt(questions);
+  },
+  askSetup: () => {
+    const questions = [
+      {
+        name: "username",
+        type: "input",
+        message: "username: "
+      },
+      {
+        name: "option",
+        type: "input",
+        message: "option: "
+      },
+      {
+        name: "value",
+        type: "input",
+        message: "value: "
+      }
+    ];
   }
 };
