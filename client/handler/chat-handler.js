@@ -56,6 +56,8 @@ module.exports = exceptionWrapper(async function(commandArgs) {
           sender: sender,
           message: message
         });
+        // console.log("Get message ...")
+        displayMsg(messageLog, receivers);
       }
     }
   });
