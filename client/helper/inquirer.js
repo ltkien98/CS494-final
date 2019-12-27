@@ -112,5 +112,6 @@ module.exports = {
         message: "value: "
       }
     ];
+    return inquirer.prompt(questions);
   }
 };

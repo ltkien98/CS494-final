@@ -10,6 +10,7 @@ const Result = require("../helper/result-builder");
 
 module.exports = function(actionData, socketID) {
     let {username, option, value} = SetupAction.fromJson(actionData);
+    
     const userInfo = UserDb.find(username);
     let result;
 
@@ -38,6 +39,7 @@ module.exports = function(actionData, socketID) {
                     .setData( {message: "Can not setup this info"});
                 return result;
         }
+        UserDb.update(username,userInfo);
     }
     console.log(userInfo);
     result = new Result().setType(ActionConstant.TYPE.SETUP).setData({});

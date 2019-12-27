@@ -34,6 +34,7 @@ const handleLogin = require("./handler/login-handler");
 const handleChat = require("./handler/chat-handler");
 const handleUpload = require("./handler/upload-handler");
 const handleCheck = require("./handler/check-handler");
+const handleSetup = require("./handler/setup-handler");
 
 const ProtocolClient = require("./protocol-client");
 const main = async () => {
@@ -60,6 +61,9 @@ const main = async () => {
           break;
         case ActionConstant.COMMAND.CHECK:
           await handleCheck(commandArgs);
+          break;
+        case ActionConstant.COMMAND.SETUP:
+          await handleSetup(commandArgs);
           break;
         case "exit":
         case "quit":
