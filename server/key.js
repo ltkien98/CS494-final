@@ -11,7 +11,7 @@ class Key {
       return;
     } else {
       const { privateKey, publicKey } = crypto.generateKeyPairSync("rsa", {
-        modulusLength: 2048,
+        modulusLength: 1024,
         publicKeyEncoding: {
           type: "spki",
           format: "pem"
