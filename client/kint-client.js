@@ -23,6 +23,9 @@ console.log(chalk.yellowBright("Try 'connect 127.0.0.1 1337' to get started"));
 console.log(chalk.yellowBright("'register' to create account"));
 console.log(chalk.yellowBright("'login' to login your account"));
 console.log(chalk.yellowBright("'check' to search in database (options: show name, show status, show date, show password, show note"));
+console.log(chalk.yellowBright("'setup' to edit user info with options (name, note, date)"));
+console.log(chalk.yellowBright("'chat' for chatting with other clients"));
+console.log(chalk.yellowBright("'upload' to upload file to server"));
 console.log(chalk.yellowBright("'exit' or 'quit' to exit program"));
 
 const inquirer = require("./helper/inquirer");
